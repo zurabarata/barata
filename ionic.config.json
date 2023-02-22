@@ -1,0 +1,7 @@
+{
+  "name": "barata",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
