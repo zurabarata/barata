@@ -1,16 +1,37 @@
-import './ExploreContainer.css';
+import {FunctionComponent} from "react";
+import {IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle} from "@ionic/react";
 
 interface ContainerProps {
   name: string;
 }
 
-const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
+export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name }) => {
   return (
-    <div className="container">
-      <strong>{name}</strong>
-      <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+    }}>
+        <div style={{
+                width: "100%",
+                maxWidth: "400px",
+                height: "100%",
+                maxHeight: "800px",
+            }}>
+        <IonCard>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <IonCardHeader>
+                <IonCardTitle>Card Title</IonCardTitle>
+                <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+            </IonCardHeader>
+
+            <IonCardContent>
+                Here's a small text description for the card content. Nothing more, nothing less.
+            </IonCardContent>
+        </IonCard>
+        </div>
     </div>
   );
 };
-
-export default ExploreContainer;
