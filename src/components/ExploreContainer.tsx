@@ -24,8 +24,13 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name, auth
                 height: "400px",
                 maxHeight: "800px",
             }}>
-                <IonGrid>
-                    <IonRow>
+ <div style={{
+                     display: "grid",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%",
+                        height: "100%",
+ }} ><div>
                         <IonText style={{
                             textAlign: "center",
                             color: "black",
@@ -37,16 +42,18 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name, auth
                             textAlign: "center",
                             color: "black",
                             fontSize: "20px",
+                            whiteSpace: "pre-line",
                         }}
-                        >{author}
+                        >{`   \n\n - ${author}`}
                         </IonText>)}
-                        {buttonLabel &&
-                            (<IonButton onClick={onClick}
-                        >{buttonLabel}</IonButton>)
-                        }
-                    </IonRow>
-                </IonGrid>
+ </div>
 
+                {buttonLabel &&
+                    (<IonButton onClick={onClick}
+                    >{buttonLabel}</IonButton>)
+                }
+
+                </div>
             </div>
         </div>
     );
