@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import {ExploreContainer} from "../components/ExploreContainer"
 
 const Tab1: React.FC = () => {
+
   return (
     <IonPage >
       <IonContent fullscreen>

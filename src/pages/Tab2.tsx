@@ -1,21 +1,24 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from '@ionic/react';
 import {ExploreContainer} from "../components/ExploreContainer"
+import {useFetchRandomRuotes} from "../hooks/useFetchRandomRuotes";
 
 const Tab2: React.FC = () => {
+
+  const {quoteWithAuthor, isLoading, refetchQuote, author, quote} = useFetchRandomRuotes()
+
   return (
     <IonPage>
-{/*      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
-        </IonToolbar>
-      </IonHeader>*/}
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <ExploreContainer name={quote} onClick={
+            () => {
+                refetchQuote()
+            }
+        } author={author} buttonLabel="refetch" />
       </IonContent>
     </IonPage>
   );
