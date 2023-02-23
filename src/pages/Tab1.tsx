@@ -3,8 +3,10 @@ import {ExploreContainer} from "../components/ExploreContainer"
 
 const Tab1: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader>
+    <IonPage >
+      <IonHeader style={{
+          backgroundColor: "white",
+      }}>
         <IonToolbar>
           <IonTitle>Tab 1</IonTitle>
         </IonToolbar>
@@ -15,7 +17,7 @@ const Tab1: React.FC = () => {
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <ExploreContainer name="The time is now" />
       </IonContent>
     </IonPage>
   );

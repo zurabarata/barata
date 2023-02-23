@@ -53,14 +53,22 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+        <IonTabBar slot="bottom" style={{
+          backgroundColor: "white",
+        }}>
+          <IonTabButton tab="tab1" href="/tab1" style={{
+            backgroundColor: "white",
+          }}>
             <IonIcon aria-hidden="true" icon={beer} />
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="tab2" href="/tab2" style={{
+            backgroundColor: "white",
+          }}>
             <IonIcon aria-hidden="true" icon={chatbubble} />
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="tab3" href="/tab3" style={{
+            backgroundColor: "white",
+          }}>
             <IonIcon aria-hidden="true" icon={logoGithub} />
           </IonTabButton>
         </IonTabBar>

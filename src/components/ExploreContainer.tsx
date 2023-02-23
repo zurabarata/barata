@@ -1,5 +1,5 @@
 import {FunctionComponent} from "react";
-import {IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle} from "@ionic/react";
+import {IonText} from "@ionic/react";
 
 interface ContainerProps {
   name: string;
@@ -13,6 +13,7 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name }) =>
         alignItems: "center",
         width: "100%",
         height: "100%",
+        backgroundColor: "#f0d722",
     }}>
         <div style={{
                 width: "100%",
@@ -20,7 +21,7 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name }) =>
                 height: "100%",
                 maxHeight: "800px",
             }}>
-        <IonCard>
+        {/*<IonCard>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
             <IonCardHeader>
                 <IonCardTitle>Card Title</IonCardTitle>
@@ -30,7 +31,15 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name }) =>
             <IonCardContent>
                 Here's a small text description for the card content. Nothing more, nothing less.
             </IonCardContent>
-        </IonCard>
+        </IonCard>*/}
+            <IonText>
+                <h1 style={{
+                    textAlign: "center",
+                    color: "black",
+                }}
+
+                >{name}</h1>
+            </IonText>
         </div>
     </div>
   );
