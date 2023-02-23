@@ -24,15 +24,22 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name, auth
                 height: "400px",
                 maxHeight: "800px",
             }}>
-                <IonGrid >
+                <IonGrid>
                     <IonRow>
                         <IonText style={{
                             textAlign: "center",
                             color: "black",
-                            fontSize: "20px",
+                            fontSize: "25px",
                         }}
                         >{name}
                         </IonText>
+                        {author && (<IonText style={{
+                            textAlign: "center",
+                            color: "black",
+                            fontSize: "20px",
+                        }}
+                        >{author}
+                        </IonText>)}
                         {buttonLabel &&
                             (<IonButton onClick={onClick}
                         >{buttonLabel}</IonButton>)
