@@ -33,8 +33,10 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({ name, auth
                         }}
                         >{name}
                         </IonText>
-                        <IonButton onClick={onClick}
-                        >{buttonLabel}</IonButton>
+                        {buttonLabel &&
+                            (<IonButton onClick={onClick}
+                        >{buttonLabel}</IonButton>)
+                        }
                     </IonRow>
                 </IonGrid>
 
