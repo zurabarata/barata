@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
-import { IonButton, IonText } from "@ionic/react";
+import { IonButton, IonIcon, IonText } from "@ionic/react";
+import { reload } from "ionicons/icons";
 
 interface ContainerProps {
   name: string;
@@ -34,46 +35,38 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({
           maxHeight: "800px",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          {!isLoading && (
-            <div>
+        {!isLoading && (
+          <div>
+            <IonText
+              style={{
+                textAlign: "center",
+                color: "black",
+                fontSize: "20px",
+              }}
+            >
+              {name}
+            </IonText>
+            {author && (
               <IonText
                 style={{
+                  width: "390px",
                   textAlign: "center",
                   color: "black",
-                  fontSize: "25px",
+                  fontSize: "15px",
+                  whiteSpace: "pre-line",
                 }}
               >
-                {name}
+                {`   \n\n - ${author}`}
               </IonText>
-              {author && (
-                <IonText
-                  style={{
-                    textAlign: "center",
-                    color: "black",
-                    fontSize: "20px",
-                    whiteSpace: "pre-line",
-                  }}
-                >
-                  {`   \n\n - ${author}`}
-                </IonText>
-              )}
-            </div>
-          )}
-
-          {buttonLabel && (
-            <IonButton onClick={onClick}>{buttonLabel}</IonButton>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
+      {buttonLabel && (
+        <IonButton color="info" onClick={onClick}>
+          <IonIcon aria-hidden="true" icon={reload} />
+        </IonButton>
+      )}
     </div>
   );
 };
