@@ -1,5 +1,5 @@
 import {FunctionComponent} from "react";
-import {IonButton, IonGrid, IonRow, IonText} from "@ionic/react";
+import {IonButton, IonText} from "@ionic/react";
 
 interface ContainerProps {
   name: string;
