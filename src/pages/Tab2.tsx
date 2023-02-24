@@ -1,10 +1,4 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 import { ExploreContainer } from "../components/ExploreContainer";
 import { useFetchRandomRuotes } from "../hooks/useFetchRandomRuotes";
 
@@ -14,11 +8,11 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
+        {/*        <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader>*/}
         <ExploreContainer
           name={quote}
           onClick={() => {
