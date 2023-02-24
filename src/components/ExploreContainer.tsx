@@ -20,7 +20,7 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({
   return (
     <div
       style={{
-        display: "flex",
+        display: "grid",
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
@@ -33,10 +33,21 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({
           maxWidth: "400px",
           height: "400px",
           maxHeight: "800px",
+          display: "flex",
         }}
       >
         {!isLoading && (
-          <div>
+          <div
+            style={{
+              // center text
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "5px",
+              // center text
+            }}
+          >
             <IonText
               style={{
                 textAlign: "center",
@@ -49,7 +60,7 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({
             {author && (
               <IonText
                 style={{
-                  width: "390px",
+                  width: "360px",
                   textAlign: "center",
                   color: "black",
                   fontSize: "15px",
