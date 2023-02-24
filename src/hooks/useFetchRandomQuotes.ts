@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchQuote } from "../utils/fetchQuote";
 
-export const useFetchRandomRuotes = () => {
+export const useFetchRandomQuotes = () => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ export const useFetchRandomRuotes = () => {
     setIsLoading(false);
   }, []);
 
-  const quoteWithAuthor = quote + "\n\n - " + author;
+  const quoteWithAuthor = `\"${quote}\" - ${author}`;
 
   const refetchQuote = () => {
     setIsLoading(true);
@@ -26,5 +26,5 @@ export const useFetchRandomRuotes = () => {
     setIsLoading(false);
   };
 
-  return { quote, author, quoteWithAuthor, isLoading, refetchQuote };
+  return { quoteWithAuthor, isLoading, refetchQuote };
 };

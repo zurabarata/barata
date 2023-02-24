@@ -4,7 +4,6 @@ import { reload } from "ionicons/icons";
 
 interface ContainerProps {
   name: string;
-  author?: string;
   onClick?: () => void;
   buttonLabel?: string;
   isLoading?: boolean;
@@ -12,7 +11,6 @@ interface ContainerProps {
 
 export const ExploreContainer: FunctionComponent<ContainerProps> = ({
   name,
-  author,
   onClick,
   buttonLabel,
   isLoading,
@@ -57,19 +55,6 @@ export const ExploreContainer: FunctionComponent<ContainerProps> = ({
             >
               {name}
             </IonText>
-            {author && (
-              <IonText
-                style={{
-                  width: "360px",
-                  textAlign: "center",
-                  color: "black",
-                  fontSize: "15px",
-                  whiteSpace: "pre-line",
-                }}
-              >
-                {`   \n\n - ${author}`}
-              </IonText>
-            )}
           </div>
         )}
       </div>

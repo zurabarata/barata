@@ -1,9 +1,9 @@
 import { IonContent, IonPage } from "@ionic/react";
 import { ExploreContainer } from "../components/ExploreContainer";
-import { useFetchRandomRuotes } from "../hooks/useFetchRandomRuotes";
+import { useFetchRandomQuotes } from "../hooks/useFetchRandomQuotes";
 
 const Tab2: React.FC = () => {
-  const { isLoading, refetchQuote, author, quote } = useFetchRandomRuotes();
+  const { isLoading, refetchQuote, quoteWithAuthor } = useFetchRandomQuotes();
 
   return (
     <IonPage>
@@ -14,12 +14,11 @@ const Tab2: React.FC = () => {
           </IonToolbar>
         </IonHeader>*/}
         <ExploreContainer
-          name={quote}
+          name={quoteWithAuthor}
           onClick={() => {
             refetchQuote();
           }}
-          author={author}
-          buttonLabel="refetch"
+          buttonLabel="refetch quote"
           isLoading={isLoading}
         />
       </IonContent>
